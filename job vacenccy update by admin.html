@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Job Modification - SLT Mobitel Training Program</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-p6O1eQoQlWwXfWyhrUIFzD4U6evLaRmlz4GVrzkOICdq1QeJ0EvkXsA2+o1aN03F4XbD/hB5y9YlgzBzjHF9AA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #f5faff;
+    }
+
+    header {
+      background: white;
+      padding: 15px 30px;
+      border-radius: 0 0 20px 20px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
+      z-index: 2;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo img {
+      height: 35px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #333;
+      margin-left: 30px;
+      font-weight: bold;
+    }
+
+    .container {
+      display: flex;
+    }
+
+    aside {
+      width: 200px;
+      background: #004f9e;
+      color: white;
+      min-height: 100vh;
+      padding-top: 50px;
+    }
+
+    aside ul {
+      list-style: none;
+    }
+
+    aside ul li {
+      padding: 15px 20px;
+      cursor: pointer;
+    }
+
+    aside ul li.active, aside ul li:hover {
+      background: #0b67c2;
+    }
+
+    main {
+      flex: 1;
+      padding: 40px;
+      position: relative;
+    }
+
+    .search-box {
+      position: absolute;
+      top: 0;
+      right: 30px;
+      margin-top: -35px;
+      display: flex;
+      border-radius: 25px;
+      overflow: hidden;
+      box-shadow: 0 0 4px rgba(0,0,0,0.1);
+    }
+
+    .search-box input {
+      border: none;
+      padding: 10px 20px;
+      outline: none;
+      width: 250px;
+    }
+
+    .search-box button {
+      background: #fff;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 40px;
+    }
+
+    thead {
+      background: #0b67c2;
+      color: white;
+    }
+
+    thead th {
+      padding: 12px;
+      border-radius: 15px 15px 0 0;
+    }
+
+    tbody td {
+      padding: 15px;
+      text-align: center;
+    }
+
+    tbody tr:nth-child(even) {
+      background: #f1f1f1;
+    }
+
+    .actions i {
+      margin: 0 10px;
+      cursor: pointer;
+    }
+
+    .actions i:hover {
+      color: #0b67c2;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="images/home.PNG" alt="Logo">
+      <span><strong>Training Program</strong></span>
+    </div>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Logout</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <aside>
+      <ul>
+        <li>Job Creation</li>
+        <li class="active">Job Modification</li>
+        <li>Received CVs</li>
+        <li>Accepted CVs</li>
+      </ul>
+    </aside>
+
+    <main>
+      <div class="search-box">
+        <input type="text" placeholder="Search">
+        <button><i class="fas fa-search"></i></button>
+      </div>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Job ID</th>
+            <th>Job Field</th>
+            <th>Created Date</th>
+            <th>Status</th>
+            <th>Modification</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>IT</td>
+            <td>QA Trainee</td>
+            <td>2023/10/14</td>
+            <td>Rejected</td>
+            <td class="actions">
+              <i class="fas fa-pen"></i>
+              <i class="fas fa-trash"></i>
+            </td>
+          </tr>
+          <tr>
+            <td>HR</td>
+            <td>HR Trainee</td>
+            <td>2023/09/11</td>
+            <td>Accepted</td>
+            <td class="actions">
+              <i class="fas fa-pen"></i>
+              <i class="fas fa-trash"></i>
+            </td>
+          </tr>
+          <tr>
+            <td>Finance</td>
+            <td>Accountant</td>
+            <td>2023/08/16</td>
+            <td>Rejected</td>
+            <td class="actions">
+              <i class="fas fa-pen"></i>
+              <i class="fas fa-trash"></i>
+            </td>
+          </tr>
+          <tr>
+            <td>IT</td>
+            <td>Web Developer</td>
+            <td>2023/08/02</td>
+            <td>Accepted</td>
+            <td class="actions">
+              <i class="fas fa-pen"></i>
+              <i class="fas fa-trash"></i>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </main>
+  </div>
+
+  <script>
+    // Highlight active sidebar menu item on click
+    const items = document.querySelectorAll('aside ul li');
+    items.forEach(item => {
+      item.addEventListener('click', () => {
+        items.forEach(i => i.classList.remove('active'));
+        item.classList.add('active');
+      });
+    });
+  </script>
+</body>
+</html>

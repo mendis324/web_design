@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Job Information - SLTMobitel</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background-color: #eef6fa;
+      padding: 1rem;
+    }
+
+    .navbar {
+      background-color: white;
+      border-radius: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .navbar-left {
+      display: flex;
+      align-items: center;
+    }
+
+    .navbar-left img {
+      height: 40px;
+      margin-right: 10px;
+    }
+
+    .navbar-left h2 {
+      color: #0057a0;
+      font-size: 1.2rem;
+    }
+
+    .navbar-right {
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .navbar-right a {
+      text-decoration: none;
+      color: black;
+      font-weight: 500;
+    }
+
+    .main-title {
+      text-align: center;
+      font-size: 1.8rem;
+      font-weight: bold;
+      margin-bottom: 2rem;
+    }
+
+    .job-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      padding: 0 2rem;
+    }
+
+    .job-card {
+      background-color: white;
+      border-radius: 20px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+      padding: 1.5rem;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .job-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    }
+
+    .job-card h3 {
+      background-color: #004aad;
+      color: white;
+      padding: 0.7rem;
+      border-radius: 12px;
+      font-size: 1rem;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+
+    .job-card ul {
+      margin-bottom: 1.5rem;
+      font-size: 0.9rem;
+      line-height: 1.5;
+      color: #333;
+      padding-left: 1.2rem;
+    }
+
+    .job-card ul li {
+      margin-bottom: 0.5rem;
+    }
+
+    .apply-btn {
+      background-color: #40c439;
+      color: white;
+      border: none;
+      border-radius: 30px;
+      padding: 0.7rem 1.5rem;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+      align-self: center;
+    }
+
+    .apply-btn:hover {
+      background-color: #36a32f;
+    }
+
+    .check-status {
+      text-align: center;
+      margin: 2.5rem 0 1rem;
+    }
+
+    .check-status button {
+      background-color: #0066cc;
+      color: white;
+      border: none;
+      padding: 1rem 2rem;
+      border-radius: 30px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .check-status button:hover {
+      background-color: #004b99;
+    }
+
+    @media (max-width: 768px) {
+      .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .navbar-right {
+        margin-top: 1rem;
+        gap: 1rem;
+      }
+
+      .job-container {
+        padding: 0 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <div class="navbar">
+    <div class="navbar-left">
+      <img src="images/home.PNG" alt="SLTMobitel Logo"/>
+      <h2>Training Program</h2>
+    </div>
+    <div class="navbar-right">
+      <a href="#">Job status</a>
+      <a href="#">Apply for job</a>
+      <a href="#">jobs for you</a>
+      <a href="#">Home</a>
+      <a href="#">Login</a>
+    </div>
+  </div>
+
+  <!-- Title -->
+  <div class="main-title">Find Your Job that is prefer for you</div>
+
+  <!-- Job Cards -->
+  <div class="job-container">
+    <div class="job-card">
+      <h3>Trainee Network Engineers</h3>
+      <ul>
+        <li>No job experiences are needed.</li>
+        <li>Networking knowledge.</li>
+        <li>Operating systems knowledge.</li>
+        <li>Network devices and security knowledge.</li>
+        <li>Networking device configuration knowledge.</li>
+      </ul>
+      <button class="apply-btn">Apply Now</button>
+    </div>
+
+    <div class="job-card">
+      <h3>ACCOUNTANT–FINANCIAL ACCOUNTING</h3>
+      <ul>
+        <li>Associate Membership of ICA/CIMA/ACCA.</li>
+        <li>Preference to candidates who are prize winners.</li>
+        <li>Be a resilient leader with excellent communication skills.</li>
+      </ul>
+      <button class="apply-btn">Apply Now</button>
+    </div>
+
+    <div class="job-card">
+      <h3>ENGINEERS</h3>
+      <ul>
+        <li>BSc Engineering or Tech degree from UGC recognized institution.</li>
+        <li>Member of the Institute of Engineers Sri Lanka.</li>
+        <li>Knowledge of data center/network/cloud/IT platforms.</li>
+      </ul>
+      <button class="apply-btn">Apply Now</button>
+    </div>
+
+    <div class="job-card">
+      <h3>TECHNICIANS</h3>
+      <ul>
+        <li>6 passes at G.C.E (O/L) in one sitting.</li>
+        <li>NVQ Level 4 competence in telecom/electrical/ICT fields.</li>
+      </ul>
+      <button class="apply-btn">Apply Now</button>
+    </div>
+  </div>
+
+  <!-- Status Check -->
+  <div class="check-status">
+    <button>Check the Applied Job Status</button>
+  </div>
+
+  <script>
+    // Basic animation on page load
+    document.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('.job-card').forEach((card, i) => {
+        card.style.opacity = 0;
+        card.style.transform = 'translateY(20px)';
+        setTimeout(() => {
+          card.style.transition = 'all 0.6s ease';
+          card.style.opacity = 1;
+          card.style.transform = 'translateY(0)';
+        }, i * 150);
+      });
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Job Creation Form</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    body {
+      background: #f4f7fa;
+    }
+
+    .container {
+      display: flex;
+    }
+
+    .sidebar {
+      width: 200px;
+      height: 100vh;
+      background-color: #0054a6;
+      padding-top: 60px;
+      color: white;
+    }
+
+    .sidebar a {
+      display: block;
+      padding: 15px 20px;
+      color: white;
+      text-decoration: none;
+      border-left: 5px solid transparent;
+      transition: 0.3s;
+    }
+
+    .sidebar a:hover {
+      background-color: #003f7d;
+      border-left: 5px solid white;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 60px;
+      background: white;
+      border-radius: 0 0 20px 20px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 20px;
+      z-index: 10;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo img {
+      height: 40px;
+    }
+
+    .nav-links a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: black;
+      font-weight: 500;
+    }
+
+    .main-content {
+      margin-left: 200px;
+      padding: 100px 40px 40px;
+    }
+
+    .form-container {
+      background-color: white;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+      width: 100%;
+      max-width: 950px;
+    }
+
+    .form-title {
+      font-weight: bold;
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+
+    .form-row {
+      display: flex;
+      gap: 20px;
+      margin-bottom: 20px;
+    }
+
+    .form-group {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .form-group label {
+      font-size: 14px;
+      margin-bottom: 5px;
+    }
+
+    .form-group input,
+    .form-group textarea {
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      font-size: 14px;
+    }
+
+    .form-group textarea {
+      height: 80px;
+      resize: none;
+    }
+
+    .create-button {
+      background-color: #1a4eff;
+      color: white;
+      padding: 10px 30px;
+      border: none;
+      border-radius: 20px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .create-button:hover {
+      background-color: #1239c5;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="images/home.PNG" alt="SLT Mobitel Logo" />
+      <span style="font-weight: bold; color: #0054a6; font-size: 18px;">Training Program</span>
+    </div>
+    <div class="nav-links">
+      <a href="#">Home</a>
+      <a href="#">Logout</a>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="sidebar">
+      <a href="#">▶ Job Creation</a>
+      <a href="#">▶ Job Modification</a>
+      <a href="#">▶ Received CVs</a>
+      <a href="#">▶ Accepted CVs</a>
+    </div>
+    <div class="main-content">
+      <div class="form-container">
+        <div class="form-title">Company Job Vacancy : Web Development Trainee</div>
+        <form>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Job ID :</label>
+              <input type="text">
+            </div>
+            <div class="form-group">
+              <label>Job Field :</label>
+              <input type="text">
+            </div>
+            <div class="form-group">
+              <label>Job Position :</label>
+              <input type="text">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Contact Number :</label>
+              <input type="text">
+            </div>
+            <div class="form-group">
+              <label>Background :</label>
+              <input type="text">
+            </div>
+            <div class="form-group">
+              <label>Salary :</label>
+              <input type="text">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Due Date :</label>
+              <input type="date">
+            </div>
+            <div class="form-group">
+              <label>Company Email :</label>
+              <input type="email">
+            </div>
+            <div class="form-group">
+              <label>Company Location :</label>
+              <input type="text">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Work Type:</label>
+              <input type="text">
+            </div>
+            <div class="form-group" style="flex: 2;">
+              <label>Job Description :</label>
+              <textarea></textarea>
+            </div>
+          </div>
+          <button type="submit" class="create-button">Create</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // JavaScript for sidebar highlighting
+    const links = document.querySelectorAll('.sidebar a');
+    links.forEach(link => {
+      link.addEventListener('click', function () {
+        links.forEach(el => el.style.backgroundColor = '#0054a6');
+        this.style.backgroundColor = '#003f7d';
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SLTMobitel Training Program</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: url('your-background-image.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #000;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      background: #fff;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo img {
+      width: 150px; /* Your logo slot here */
+    }
+
+    .logo span {
+      font-size: 20px;
+      font-weight: bold;
+      margin-left: 10px;
+      color: #0073e6;
+    }
+
+    nav {
+      display: flex;
+      gap: 20px;
+      font-size: 16px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #000;
+      border-right: 1px solid #ccc;
+      padding-right: 10px;
+    }
+
+    nav a:last-child {
+      border-right: none;
+    }
+
+    .container {
+      background: white;
+      margin: 40px auto;
+      padding: 30px;
+      width: 85%;
+      border-radius: 20px;
+      box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    thead {
+      background: #0057a3;
+      color: white;
+    }
+
+    th, td {
+      padding: 15px;
+      text-align: left;
+    }
+
+    tr:nth-child(even) {
+      background: #f3f3f3;
+    }
+
+    tr:nth-child(odd) {
+      background: #ffffff;
+    }
+
+    .highlight {
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="images/home.PNG" alt="SLTMobitel Logo" />
+      <span>Training Program</span>
+    </div>
+    <nav>
+      <a href="#">Job status</a>
+      <a href="#">Apply for job</a>
+      <a href="#">Jobs for you</a>
+      <a href="#">Home</a>
+      <a href="#">Login</a>
+    </nav>
+  </header>
+
+  <div class="container highlight">
+    <h2>Applied Job Status:</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Job Field</th>
+          <th>Job Position</th>
+          <th>Recommendation</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Software</td>
+          <td>QA Trainee</td>
+          <td>Approved yesterday</td>
+          <td>Approved</td>
+        </tr>
+        <tr>
+          <td>Telecommunication</td>
+          <td>Trainee</td>
+          <td>Rejected yesterday</td>
+          <td>Rejected</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <script>
+    // Small animation when table appears
+    window.onload = () => {
+      document.querySelector('.container').classList.add('highlight');
+    };
+  </script>
+</body>
+</html>
